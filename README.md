@@ -12,5 +12,37 @@ Cell2cell dataset consist of wide range of features, such as information on demo
 Exploratory Data Analysis (EDA) is a important step in data pre-processing, as it helps gain insights and understanding of the dataset. Data pre-processing is crucial for model performance, as the quality of data directly impacts the model's accuracy and effectiveness. EDA can help in identifying the missing value, dropping the irrelevant variables, and data transformation to effectively pre-process the data.
 
 **Missing value Handling**
+![missing](image/missing.png)
+- There are 14 features in total that contain missing values.
+- The feature with missing value were imputed with value of 0.
+
+**Remove Irrelevant Features**
+- During EDA, "Customer ID" and "Service Area" features do not contribute meaningful insights.
+- These features are dropped from the dataset as they are deemed irrelevant to the analysis.
+
+**Data Transformation**
+![labelencoding](image/label.png)
+Label Encoding is used to transform categorical features into a numeric form suitable for modeling.
+
+![minmaxscaling](image/minmax.png)
+Min-max scaling, a common data scaling method, is used to scale features to a range of 0-1.
+
+**Imbalance Class Handling**
+Binary classification often faces class imbalance, with churners being the minority class which lead to bias model. The Cell2cell dataset also exhibits class imbalance, with a high percentage of non-churners. Synthetic Minority Oversampling Technique (SMOTE) is a relevant method for data balancing. SMOTE generates synthetic instances of the minority class to address class imbalance.
+
+![imbalanceclass](image/imbalance.png)
+
+**Modelling**
+- Ensemble learning combines multiple algorithms to improve predictions.
+- Heterogeneous ensembles are recommended for customer churn prediction due to their ability to leverage different classifiers and enhance performance.
+- Base Classifier: Logistic Regression, Decision Tree, Support Vector Machine, and Convolutional Neural Network
+- CatBoost is chosen as the meta-learner for its effective handling of diverse data.
+
+![result](image/result.png)
+
+The final result is shown as above. The model get 62.4% of f1-score.
+
+
+
 
 
