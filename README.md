@@ -13,6 +13,7 @@ Exploratory Data Analysis (EDA) is a important step in data pre-processing, as i
 
 **Missing value Handling**
 ![missing](image/missing.png)
+
 - There are 14 features in total that contain missing values.
 - The feature with missing value were imputed with value of 0.
 
@@ -22,9 +23,11 @@ Exploratory Data Analysis (EDA) is a important step in data pre-processing, as i
 
 **Data Transformation**
 ![labelencoding](image/label.png)
+
 Label Encoding is used to transform categorical features into a numeric form suitable for modeling.
 
 ![minmaxscaling](image/minmax.png)
+
 Min-max scaling, a common data scaling method, is used to scale features to a range of 0-1.
 
 **Imbalance Class Handling**
